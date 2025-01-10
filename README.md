@@ -22,5 +22,18 @@ This repository contains the source code for the **Community Events Management P
 - **Assets:** Images, videos, and other resources for the site.
 - **Database:** SQL schema for users, events, and registrations.
 
-- ![image](https://github.com/user-attachments/assets/eccbf1c7-ffb2-4306-bd92-fa7c00de9441)
+  ## User Interface
+
+  ![image](https://github.com/user-attachments/assets/eccbf1c7-ffb2-4306-bd92-fa7c00de9441)
+  ![image](https://github.com/user-attachments/assets/e300aa77-ecda-4bdc-9df6-5ddbda9c1f67)
+  ![image](https://github.com/user-attachments/assets/eb22af50-c678-486a-a4bb-d3d4da916879)
+  ![image](https://github.com/user-attachments/assets/0b07201c-42c7-4ca2-b40d-74b992b091cd)
+  ![image](https://github.com/user-attachments/assets/3784c0f5-2b58-4f88-b9d5-b7625bf29005)
+  ![image](https://github.com/user-attachments/assets/6eae2651-b73b-4edd-a00c-5c1da07ea4a7)
+  ![image](https://github.com/user-attachments/assets/e8c8d398-11b6-4834-a4f4-f6549665cb90)
+
+
+
+
+
 
