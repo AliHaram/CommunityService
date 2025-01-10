@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">Community Events</div>
+        <nav>
+            <ul>
+                <li><a href="WebProj.php">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <video autoplay muted loop playsinline>
+            <source src="eventsVid.mp4" type="video/mp4">
+            Your browser does not support the video.
+        </video>
+        <div class="content-overlay">
+            <h1> Events</h1>
+        </div>
+    </main>
+
+    <section class="events-section" id="events">
+        <h2>Our Events</h2>
+        <div id="alert-container"></div>
+        <div id="events-container" class="event-cards">
+
+            <script>
+                async function fetchEvents() {
+                    try {
+                        const response = await fetch('fetch_events.php');
+                        const events = await response.json();
+                        const container = document.getElementById('events-container');
+                        events.forEach(event => {
+                            const eventCard = document.createElement('div');
+                            eventCard.classList.add('event-card');
+                            eventCard.innerHTML = `
+                                <div class="event-card-inner">
+                                    <div class="event-card-front">
+                                        ${event.title}
+                                    </div>
+                                    <div class="event-card-back">
+                                        <p><strong>Details:</strong> ${event.description}</p>
+                                        <p><strong>Location:</strong> ${event.location}</p>
+                                        <p><strong>Date:</strong> ${event.start_date}</p>
+                                        <p><strong>Time:</strong> ${event.start_time} - ${event.end_time}</p>
+                                    </div>
+                                </div>`;
+                            container.appendChild(eventCard);
+                        });
+                    } catch (error) {
+                        console.error('Error loading events:', error);
+                    }
+                }
+            
+                fetchEvents();
+            </script>
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(1)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Wayfarer Program
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Assist in serving daily hot meals to 350-400 individuals in need at Alisar's headquarters in Amman.</p>
+                            <p><strong>Location:</strong> Alisar's Headquarters</p>
+                            <p><strong>Date:</strong> 2024-02-15</p>
+                            <p><strong>Time:</strong> 09:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(2)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Educate the Youth Program
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Join Diddyucation Inc.'s summer programs to empower youth with knowledge about preparing for the future.</p>
+                            <p><strong>Location:</strong> Diddyucation Center</p>
+                            <p><strong>Date:</strong> 2024-03-10</p>
+                            <p><strong>Time:</strong> 10:00 AM - 03:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(3)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Medical Volunteer Opportunities
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Mentor aspiring healthcare providers by helping with MCAT/USMLE prep, resume building, and more.</p>
+                            <p><strong>Location:</strong> Healthcare Academy</p>
+                            <p><strong>Date:</strong> 2024-04-05</p>
+                            <p><strong>Time:</strong> 01:00 PM - 04:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(4)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Grenzenlos Program
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Support children and communities in refugee camps through JHASi Jordan's impactful initiatives.</p>
+                            <p><strong>Location:</strong> Refugee Camps</p>
+                            <p><strong>Date:</strong> 2024-05-20</p>
+                            <p><strong>Time:</strong> 08:00 AM - 11:00 AM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(5)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Save the Ocean Program
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Volunteer with Masri Co. to clean the ocean floors in Aqaba and contribute to marine conservation.</p>
+                            <p><strong>Location:</strong> Aqaba Coast</p>
+                            <p><strong>Date:</strong> 2024-06-10</p>
+                            <p><strong>Time:</strong> 09:00 AM - 12:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(6)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Field Visits Program
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Participate with Faris United in field visits, learning about agricultural practices and providing food aid.</p>
+                            <p><strong>Location:</strong> Agricultural Sites</p>
+                            <p><strong>Date:</strong> 2024-07-05</p>
+                            <p><strong>Time:</strong> 08:00 AM - 01:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(7)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            Sama Albadia
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Assist youth in challenging backgrounds through after-school programs with International Volunteer HQ in Amman.</p>
+                            <p><strong>Location:</strong> Amman Schools</p>
+                            <p><strong>Date:</strong> 2024-08-15</p>
+                            <p><strong>Time:</strong> 03:00 PM - 06:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(8)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            King Hussein Cancer Foundation
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Support the fight against cancer by joining the Siwar Al Hussein Volunteering Program.</p>
+                            <p><strong>Location:</strong> KHCF Center</p>
+                            <p><strong>Date:</strong> 2024-09-01</p>
+                            <p><strong>Time:</strong> 10:00 AM - 02:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="event-card">
+                <a href="javascript:void(0)" onclick="handleEventClick(9)">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            The Children's Museum
+                        </div>
+                        <div class="event-card-back">
+                            <p><strong>Details:</strong> Enhance your professional and social skills through one of Jordan's best volunteering experiences.</p>
+                            <p><strong>Location:</strong> Children's Museum, Amman</p>
+                            <p><strong>Date:</strong> 2024-09-20</p>
+                            <p><strong>Time:</strong> 11:00 AM - 04:00 PM</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Community Events. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Fetch events from the backend
+        async function fetchEvents() {
+            try {
+                const response = await fetch('fetch_events.php');
+                const events = await response.json();
+                renderEvents(events);
+            } catch (error) {
+                console.error("Error fetching events:", error);
+                document.getElementById('events-container').innerHTML += "<p>Unable to load events. Please try again later.</p>";
+            }
+        }
+
+        // Render events dynamically
+        function renderEvents(events) {
+            const container = document.getElementById('events-container');
+            events.forEach(event => {
+                const eventCard = document.createElement('div');
+                eventCard.classList.add('event-card');
+                eventCard.innerHTML = `
+                    <a href="register_event.php?event_id=${event.id}">
+                        <div class="event-card-inner">
+                            <div class="event-card-front">
+                                ${event.title}
+                            </div>
+                            <div class="event-card-back">
+                                <p><strong>Details:</strong> ${event.description}</p>
+                                <p><strong>Location:</strong> ${event.location}</p>
+                                <p><strong>Date:</strong> ${event.start_date}</p>
+                                <p><strong>Time:</strong> ${event.start_time} - ${event.end_time}</p>
+                            </div>
+                        </div>
+                    </a>
+                `;
+                container.appendChild(eventCard);
+            });
+        }
+
+        // Load events when the page loads
+        fetchEvents();
+
+        
+    </script>
+
+<script>
+    async function handleEventClick(eventId) {
+        try {
+            // Check login status
+            const response = await fetch('check_login.php');
+            const data = await response.json();
+
+            if (data.logged_in) {
+                // Attempt to register for the event
+                const registerResponse = await fetch(`register_event.php?event_id=${eventId}`);
+                const registerData = await registerResponse.json();
+
+                // Display success or error message
+                if (registerData.status === "success") {
+                    displayAlert("You have successfully registered for the event!", "success");
+                } else {
+                    displayAlert(registerData.message || "Something went wrong. Please try again.", "error");
+                }
+            } else {
+                // Redirect to login page if not logged in
+                window.location.href = 'login.php?error=Please log in to register for events.';
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            displayAlert("An error occurred. Please try again later.", "error");
+        }
+    }
+
+    function displayAlert(message, type) {
+        const alertContainer = document.getElementById('alert-container');
+        alertContainer.innerHTML = `<div class="alert ${type}">${message}</div>`;
+        setTimeout(() => alertContainer.innerHTML = '', 5000);
+    }
+</script>
+
+</script>
+
+</body>
+
+</html>

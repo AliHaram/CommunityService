@@ -1,0 +1,164 @@
+/* Combine styles from both files */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f4fa;
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+width: 20%;
+background: linear-gradient(145deg, #34495e, #2c3e50);
+color: #ecf0f1;
+padding: 20px;
+min-height: 100vh;
+box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+font-size: 1.5rem;
+font-weight: bold;
+margin-bottom: 20px;
+color: #ffcc00;
+text-align: center;
+border-bottom: 2px solid #ffcc00;
+padding-bottom: 10px;
+}
+
+.sidebar ul {
+list-style: none; /* Remove default bullet points */
+padding: 0; /* Reset padding */
+margin: 0; /* Reset margin */
+display: block;
+}
+
+.sidebar ul li {
+margin-bottom: 15px; /* Add spacing between list items */
+}
+
+.sidebar ul li a {
+color: #ecf0f1; /* Set text color */
+text-decoration: none; /* Remove underline */
+font-size: 1.1rem; /* Slightly larger text for readability */
+padding: 10px 0; /* Add vertical padding for spacing */
+display: block; /* Make the link cover the entire line */
+border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Add a subtle divider between items */
+}
+
+.sidebar ul li a:hover {
+color: #ffcc00; /* Highlight color on hover */
+font-weight: bold; /* Optional: Make the text bold on hover */
+}
+
+
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.events-section {
+    margin-top: 30px;
+}
+
+.event-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h2 {
+    margin-top: 0;
+    color: #00264d;
+}
+
+.event-card p {
+    margin: 0.5rem 0;
+}
+
+.no-events {
+    text-align: center;
+    color: #888;
+}
+
+.cancel-event-section {
+        margin-top: 30px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .cancel-event-section h2 {
+        margin-top: 0;
+        color: #00264d;
+    }
+
+    .cancel-event-section form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cancel-event-section label {
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .cancel-event-section select {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .cancel-event-section button {
+        padding: 0.5rem 1rem;
+        background: #e74c3c;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .cancel-event-section button:hover {
+        background: #c0392b;
+    }
