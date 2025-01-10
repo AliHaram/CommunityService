@@ -21,3 +21,6 @@ This repository contains the source code for the **Community Events Management P
 - **Backend:** PHP scripts to handle database interactions, authentication, and event management.
 - **Assets:** Images, videos, and other resources for the site.
 - **Database:** SQL schema for users, events, and registrations.
+
+- ![image](https://github.com/user-attachments/assets/eccbf1c7-ffb2-4306-bd92-fa7c00de9441)
+
